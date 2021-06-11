@@ -3,12 +3,13 @@ import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
-
+import signin from './components/Signin/Signin'
 
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import './App.css';
+import Signin from './components/Signin/Signin';
 
 //You must add your own API key here from Clarifai.
 const app = new Clarifai.App({
@@ -129,6 +130,7 @@ class App extends Component {
          <Particles className='particles'
           params={particlesOptions}
         />
+        <Signin />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         <div>
               <Logo />
