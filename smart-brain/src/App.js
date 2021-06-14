@@ -10,6 +10,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import './App.css';
 import Signin from './components/Signin/Signin';
+import Register from './components/Register/Register';
 
 //You must add your own API key here from Clarifai.
 const app = new Clarifai.App({
@@ -123,6 +124,7 @@ class App extends Component {
     this.setState({route: route});
   }
 
+ 
   render() {
     const { isSignedIn, imageUrl, route, box } = this.state;
     return (
@@ -130,9 +132,9 @@ class App extends Component {
          <Particles className='particles'
           params={particlesOptions}
         />
-        <Signin />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
-        <div>
+        { route === 'home'
+          ? <div>
               <Logo />
               <Rank
                 name={this.state.user.name}
@@ -144,6 +146,12 @@ class App extends Component {
               />
               <FaceRecognition box={box} imageUrl={imageUrl} />
             </div>
+          : (
+             route === 'signin'
+             ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+             : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+            )
+        }
       </div>
     );
   }
