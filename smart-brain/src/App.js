@@ -99,7 +99,7 @@ class App extends Component {
   }
 
   onRouteChange = (route) => {
-    this.setState({route: 'home'});
+    this.setState({route: 'route'});
   }
 
  
@@ -110,9 +110,8 @@ class App extends Component {
           params={particlesOptions}
         />
         <Navigation onRouteChange={this.onRouteChange} />
-        { this.state.route === 'signin' 
-          ? <Signin onRouteChange={this.onInputChange}/>
-          : <div>
+        { this.state.route === 'home' 
+          ?  <div>
               <Logo />
               <Rank />
               <ImageLinkForm
@@ -120,7 +119,14 @@ class App extends Component {
                 onButtonSubmit={this.onButtonSubmit}
               />
               <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} /> 
-            </div>    
+            </div>  
+          : (
+              this.state.route === 'signin' 
+              ? <Signin onRouteChange={this.onRouteChange}/>
+              : <Register onRouteChange={this.onRouteChange}
+            )
+            
+            
         }
       </div>
     );
