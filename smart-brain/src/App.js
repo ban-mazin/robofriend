@@ -3,8 +3,6 @@ import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Navigation from './components/Navigation/Navigation';
-import signin from './components/Signin/Signin'
-
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
@@ -101,12 +99,7 @@ class App extends Component {
   }
 
   onRouteChange = (route) => {
-    if (route === 'signout') {
-      this.setState({isSignedIn: false})
-    } else if (route === 'home') {
-      this.setState({isSignedIn: true})
-    }
-    this.setState({route: route});
+    this.setState({route: 'home'});
   }
 
  
@@ -116,9 +109,9 @@ class App extends Component {
          <Particles className='particles'
           params={particlesOptions}
         />
-        <Navigation />
+        <Navigation onRouteChange={this.onRouteChange} />
         { this.state.route === 'signin'
-          ? <Signin />
+          ? <Signin onRouteChange={this.onInputChange}/>
           : <div>
               <Logo />
               <Rank />
