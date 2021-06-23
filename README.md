@@ -1,5 +1,5 @@
 ## smart-brain
-Smart brain is simple react app that allow user to do face recognation by enter any url png picture on image link form after signin or register.
+Smart brain simply reacts app that allows the user to do face recognition by entering any URL png picture on image link form after sign in or register.
 
 ## Screenshots
 
