@@ -3,11 +3,11 @@ Smart brain is simple react app that allow user to do face recognation by enter 
 
 ## Screenshots
 
-![Main Page]()
+![Main Page](https://github.com/ban-mazin/smart-brain/blob/main/smart-brain/public/Screen%20Shot%202021-06-23%20at%202.23.30%20PM.png?raw=true)
 
-![register page]()
+![register page](https://github.com/ban-mazin/smart-brain/blob/main/smart-brain/public/Screen%20Shot%202021-06-23%20at%202.22.21%20PM.png?raw=true)
 
-![face detect page]()
+![face detect page](https://github.com/ban-mazin/smart-brain/blob/main/smart-brain/public/Screen%20Shot%202021-06-23%20at%202.57.36%20PM.png?raw=true)
 
 
 # Getting Started with Create React App
