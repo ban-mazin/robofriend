@@ -1,5 +1,5 @@
 ## smart-brain
-Smart brain simply reacts app that allows the user to do face recognition by entering any URL png picture on image link form after sign in or register.
+Smart brain simply reacts app that allows the user to do face recognition by entering any URL jpg picture on image link form after sign in or register.
 
 ## Screenshots
 
@@ -13,6 +13,11 @@ Smart brain simply reacts app that allows the user to do face recognition by ent
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Clarifai API JavaScript Client
+
+https://github.com/Clarifai/clarifai-javascript
+
 
 ## Available Scripts
 
