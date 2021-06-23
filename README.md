@@ -5,7 +5,10 @@ Smart brain is simple react app that allow user to do face recognation by enter 
 
 ![Main Page]()
 
-![]()
+![register page]()
+
+![face detect page]()
+
 
 # Getting Started with Create React App
 
